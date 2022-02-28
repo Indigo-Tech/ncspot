@@ -113,6 +113,7 @@ impl Spotify {
 
     pub fn session_config() -> SessionConfig {
         let mut session_config = SessionConfig::default();
+        session_config.ap_port = Some(443);
         match env::var("http_proxy") {
             Ok(proxy) => {
                 info!("Setting HTTP proxy {}", proxy);
@@ -120,6 +121,7 @@ impl Spotify {
             }
             Err(_) => debug!("No HTTP proxy set"),
         }
+
         session_config
     }
 
