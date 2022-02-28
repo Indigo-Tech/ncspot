@@ -2650,8 +2650,7 @@ dependencies = [
 [[package]]
 name = "rspotify"
 version = "0.11.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "3cebf0080b78317b3208858454cb744b05ccf296d975f47d72624b8032a05875"
+source = "git+https://github.com/Indigo-Tech/rspotify.git?branch=native-cert#bbf4e3692ede60a936308b03e87f9ae2fc147fd4"
 dependencies = [
  "base64",
  "chrono",
@@ -2671,8 +2670,7 @@ dependencies = [
 [[package]]
 name = "rspotify-http"
 version = "0.11.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9328d4a8bb0863212dc93fdfc2c8c07eae4c9295f854f4453c25818faf767a10"
+source = "git+https://github.com/Indigo-Tech/rspotify.git?branch=native-cert#bbf4e3692ede60a936308b03e87f9ae2fc147fd4"
 dependencies = [
  "log",
  "maybe-async",
@@ -2684,14 +2682,12 @@ dependencies = [
 [[package]]
 name = "rspotify-macros"
 version = "0.11.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "9fbdbcf984d771b418eafcebecad34f65d02f1db64c8a3db49ec0cf599775b5a"
+source = "git+https://github.com/Indigo-Tech/rspotify.git?branch=native-cert#bbf4e3692ede60a936308b03e87f9ae2fc147fd4"
 
 [[package]]
 name = "rspotify-model"
 version = "0.11.3"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "fe4b795e0173f15e732fe14b60dda53530e6e4c3d5b7f9441d02c7740e9168d2"
+source = "git+https://github.com/Indigo-Tech/rspotify.git?branch=native-cert#bbf4e3692ede60a936308b03e87f9ae2fc147fd4"
 dependencies = [
  "chrono",
  "serde",
@@ -2758,6 +2754,27 @@ dependencies = [
  "ring",
  "sct",
  "webpki",
+]
+
+[[package]]
+name = "rustls-native-certs"
+version = "0.6.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5ca9ebdfa27d3fc180e42879037b5338ab1c040c06affd00d8338598e7800943"
+dependencies = [
+ "openssl-probe",
+ "rustls-pemfile",
+ "schannel",
+ "security-framework",
+]
+
+[[package]]
+name = "rustls-pemfile"
+version = "0.2.1"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "5eebeaeb360c87bfb72e84abdb3447159c0eaececf1bef2aecd65a8be949d1c9"
+dependencies = [
+ "base64",
 ]
 
 [[package]]
@@ -3562,6 +3579,7 @@ dependencies = [
  "log",
  "once_cell",
  "rustls",
+ "rustls-native-certs",
  "serde",
  "serde_json",
  "url",

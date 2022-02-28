@@ -49,7 +49,8 @@ libc = "0.2.117"
 parse_duration = "2.1.1"
 
 [dependencies.rspotify]
-version = "0.11.3"
+git = "https://github.com/Indigo-Tech/rspotify.git"
+branch = "native-cert"
 default-features = false
 features = ["client-ureq", "ureq-rustls-tls"]
 
